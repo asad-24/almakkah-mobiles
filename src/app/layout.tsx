@@ -32,17 +32,10 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <head>
-        <style>{`
-html {
-  font-family: ${figtree.style.fontFamily};
-  --font-sans: ${figtree.variable};
-  --font-mono: ${GeistMono.variable};
-  --font-instrument-serif: ${instrumentSerif.variable};
-}
-        `}</style>
-      </head>
+    <html
+      lang="en"
+      className={`${figtree.variable} ${instrumentSerif.variable} ${GeistMono.variable}`}
+    >
       <body className={`${figtree.variable} ${instrumentSerif.variable}`}>
         <AuthProvider>{children}</AuthProvider>
       </body>
